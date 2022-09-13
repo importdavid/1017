@@ -2,7 +2,6 @@ import smtplib, sys, os, random
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
-import openai
 from create_prompt import create_prompt
 from gpt3 import gpt3
 
@@ -14,24 +13,7 @@ PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 RECIPIENT = "wilkidav@gmail.com" # For testing
 
 # Atlas image repo
-IMAGES = '/home/blondbeard/projects/1017/atlas_images'
-
-def gpt3(prompt, engine='text-davinci-002'):
-    ENGINES = ['text-ada-001', 'text-babbage-001', 'text-curie-001', 'text-davinci-002']
-    if type(engine) == int:
-        engine = ENGINES[engine]
-
-    response = openai.Completion.create(
-        engine=engine,
-        prompt=prompt,
-        temperature=0.1,
-        max_tokens=128,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
-    )
-    return response.choices[0].text
-
+IMAGES = './atlas_images'
 
 def main(testing=False):
     msg = MIMEMultipart()
