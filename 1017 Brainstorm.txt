@@ -1,0 +1,69 @@
+1017 MSG Application
+Begin 8/15/2022 7pm
+
+    Raspberry Pi 3 set up as server on NETGEAR19 WAN
+    192.168.1.2
+    scp -r 1017/ david@192.168.1.2:~/
+    Environment Variables for wsl testing: sudo nano ~/.bashrc
+
+    Automates execution (repetitive @ 1017 am and pm)
+        I want it to do something particularly special yearly on the date 10/17
+        Can I achieve this with just a python script and the time module?
+            Would have to be upgraded to achieve more functionality (feedback loop for algorithm idea below)
+        A difference in style/content between AM and PM seems fun, explore this
+        I could use PythonAnywhere to schedule the script as a bi-daily task
+            I don't like this option because it exposes sensitive/private info within code
+        Cron Job
+            8/16/2022 Successfully scheduled
+                Will only work if computer remains on/unlocked
+            Maybe instead I should run on a raspberry pi, headless
+        Windows Task Scheduler
+            Apparently I can put the computer in "Connected Standby" mode, then wake with Scheduler to run script
+
+    Generates thoughtful content (message, picture, conveys love)
+        Can I create an algorithm to deliver better and better messages?
+            Can I accept feedback through text?
+        8/20/2022 Currently working on a repo of my own pictures of Atlas
+            Can deliver one at random from image folder along with GPT-3 poem by Atlas
+
+    Sends SMS/MMS to Emilie
+        https://realpython.com/python-send-email/
+        smtplib for python [Free]
+            8/16/2022 Can successfully send to Emilie's Phone on Google Fi
+            Ting Mobile contracts with a third-party spam filter service   
+                This blocks all sms sent from smtp/gmail
+                    Hard to cirvumvent, might be enough reason to switch providers
+        Twilio [Paid service]
+
+    Bug Bounty
+        Sometimes images are too big to be sent through gmail
+            Check image size and resize if necessary
+            Should I resize all images in the folder? Resize when taking/uploading?
+            FIXED: Just made all images into thumbnails, ~20mb to ~20kb
+        AI Haiku sometimes repeats
+            need to seed with a better setup
+            Somewhat Fixed: Create a random madlib setup with various lists of keywords
+                Then feed that to gpt3 to generate poem
+
+
+Quality AI Poems
+|
+I scratch, I eat, I vocalize-
+Alas, my day was quite uneventful.
+But all was not lost, for I did spy
+A deer outside, so fresh and new.
+I long to taste its juicy flesh,
+But sadly, 'tis not meant to be
+|
+I'm restless, I'm restless, I'm restless, I'm restless,
+I'm restless, I'm restless, I'm restless, I'm restless,
+I'm restless, I'm restless, I'm restless, I'm restless,
+I'm restless, I'm restless, I'm restless
+|
+A pot is bubbling on the stove
+The sound of sizzling makes my stomach grumble
+I open my eyes and see the kitchen
+Mysterious Neighbor Cat is cooking breakfast
+I watch as she cracks eggs into the pan
+The smell of frying makes my mouth water
+I meow for
