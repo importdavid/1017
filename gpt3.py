@@ -4,7 +4,6 @@ import os
 openai.api_key = os.getenv("OPEN_AI_API_KEY")
 openai.organization = os.getenv("OPEN_AI_ORGANIZATION")
 
-
 def gpt3(prompt, engine='text-davinci-002'):
     ENGINES = ['text-ada-001', 'text-babbage-001', 'text-curie-001', 'text-davinci-002']
     if type(engine) == int:

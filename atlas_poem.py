@@ -13,7 +13,7 @@ PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 RECIPIENT = "wilkidav@gmail.com" # For testing
 
 # Atlas image repo
-IMAGES = './atlas_images'
+IMAGES = './cat_pics'
 
 def main(testing=False):
     msg = MIMEMultipart()

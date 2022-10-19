@@ -1,10 +1,10 @@
-1017 MSG Application
 Begin 8/15/2022 7pm
 
     Raspberry Pi 3 set up as server on NETGEAR19 WAN
     192.168.1.2
     scp -r 1017/ david@192.168.1.2:~/
     Environment Variables for wsl testing: sudo nano ~/.bashrc
+        Started simply defining them within crontab
 
     Automates execution (repetitive @ 1017 am and pm)
         I want it to do something particularly special yearly on the date 10/17
@@ -44,26 +44,9 @@ Begin 8/15/2022 7pm
             need to seed with a better setup
             Somewhat Fixed: Create a random madlib setup with various lists of keywords
                 Then feed that to gpt3 to generate poem
-
-
-Quality AI Poems
-|
-I scratch, I eat, I vocalize-
-Alas, my day was quite uneventful.
-But all was not lost, for I did spy
-A deer outside, so fresh and new.
-I long to taste its juicy flesh,
-But sadly, 'tis not meant to be
-|
-I'm restless, I'm restless, I'm restless, I'm restless,
-I'm restless, I'm restless, I'm restless, I'm restless,
-I'm restless, I'm restless, I'm restless, I'm restless,
-I'm restless, I'm restless, I'm restless
-|
-A pot is bubbling on the stove
-The sound of sizzling makes my stomach grumble
-I open my eyes and see the kitchen
-Mysterious Neighbor Cat is cooking breakfast
-I watch as she cracks eggs into the pan
-The smell of frying makes my mouth water
-I meow for
+        Please help cron with environment variables!
+            Problem was actually that other errors kept arising,
+            so script wouldn't fully execute, giving illusion that
+            the problem was env variables
+                included 2> /tmp/test1 to see actually errors
+                FIXED
