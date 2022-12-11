@@ -1,7 +1,7 @@
 Begin 8/15/2022 7pm
 
     Raspberry Pi 3 set up as server on NETGEAR19 WAN
-    192.168.1.2
+    IP: 192.168.1.2
     scp -r 1017/ david@192.168.1.2:~/
     Environment Variables for wsl testing: sudo nano ~/.bashrc
         Started simply defining them within crontab

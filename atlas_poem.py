@@ -9,8 +9,12 @@ from gpt3 import gpt3
 EMAIL = "wilkidav@gmail.com"
 PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 
-# RECIPIENT = "2487901659@msg.fi.google.com"
-RECIPIENT = "wilkidav@gmail.com" # For testing
+# In-production intended recipient
+# RECIPIENT = "2487901659@message.ting.com"
+
+# These recipients are for testing purposes.
+# RECIPIENT = "2488942358@message.ting.com"
+RECIPIENT = "wilkidav@gmail.com"
 
 # Atlas image repo
 IMAGES = './cat_pics'
